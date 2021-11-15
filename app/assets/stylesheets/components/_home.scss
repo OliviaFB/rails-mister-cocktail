@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.banner {
+    background-image:
+    linear-gradient(
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.6)
+    ),
+    url("bar.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    .logo {
+        width: 300px;
+    }
+}
+.cocktail-title {
+    color: #fff;
+    letter-spacing: 4px;
+    font-weight: 100;
+    padding-bottom: 1em;
+    @media screen and(max-width: 500px) {
+        font-size: 17px;
+    }
+}
+.card-cocktail {
+    color: #fff;
+    font-weight: 100;
+    text-align: center;
+    cursor: pointer;
+}
+
+.box-cocktail {
+    box-shadow: 0px 0px 3px rgba(146, 146, 146, 0.2);
+
+}
+
+.card-image {
+    border-radius: 4px;
+    min-height: 200px;
+    background-image:
+    linear-gradient(
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.5)
+    ),
+    url("cocktail1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.image-user {
+    border-radius: 4px;
+    min-height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.fa-plus, .fa-arrow-circle-left, .fa-pencil-alt, .fa-trash, .fa-facebook-square, .fa-instagram, .fa-twitter{
+    color: #fff;
+}
+.fa-times {
+    color: rgba(255, 255, 255, 0.288);
+}
+
+.fa-star {
+    font-size: 10px;
+}
+
+.back-black {
+    background-color: black;
+}
+
+a:hover {
+    text-decoration: none;
+}

@@ -1,0 +1,81 @@
+.background-show {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    flex: 1;
+    background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 5)
+    ),
+    url("cocktail1.jpg");
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+
+    @media screen and(max-width: 600px) {
+      display: none;
+    }
+}
+
+.background-user-image {
+  position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    flex: 1;
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+    @media screen and(max-width: 600px) {
+      display: none;
+    }
+}
+
+.background-black {
+    min-height: 100vh;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: #fff;
+    width: 50%;
+;
+    padding: 100px 20px;
+    font-weight: 100;
+    div {
+      min-width: 130px;
+      @media screen and(max-width: 800px) {
+        width: 100%;
+      }
+    }
+}
+
+.arrow {
+  top: 20px;
+  position: absolute;
+  font-size: 25px;
+  transform: translate(-10px, 0);
+  @media screen and(max-width: 600px) {
+    transform: translate(20px, 0);
+  }
+}
+
+.text-buttons a {
+  padding-top: 1em;
+  color: #fff;
+  font-weight: 100;
+  line-height: 2em;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.single-review {
+  min-height: 50px;
+}
