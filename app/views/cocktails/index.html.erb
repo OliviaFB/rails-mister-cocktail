@@ -1,6 +1,48 @@
-<h1>Our cocktail list</h1>
-<br>
-<% @cocktails.each do |cocktail| %>
-<!--   <p><%= cocktail.name %></p> -->
-  <%= link_to cocktail.name, cocktail_path(cocktail) %>
-<% end %>
+<div class="banner">
+    <%= image_tag "logo.png", class: "logo" %>
+</div>
+<div class="back-black">
+    <div class="container d-flex justify-content-between align-items-center pt-5">
+        <h3 class="cocktail-title">COCKTAILS</h3>
+        <%= link_to new_cocktail_path do %>
+        <i class="fas fa-plus"></i>
+        <% end %>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <% @cocktails.each do |cocktail| %>
+            <%= link_to cocktail_path(cocktail) do %>
+            <div class="col-lg-3 col-md-5 box-cocktail m-2 mt-5">
+
+                <% if cocktail.photo.attached? %>
+                <div class="image-user mt-5"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key %>')">
+                </div>
+                <% else %>
+                <div class="card-image mt-5"></div>
+                <% end %>
+
+                <div class=" d-flex flex-column card-cocktail py-5">
+                    <strong class="cocktail-title"><%= cocktail.name %></strong>
+                    <% if cocktail.reviews.any? %>
+                    <div>
+                        <% cocktail.cocktail_average_review.times do %>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <% end %>
+                    </div>
+                    <% end %>
+
+                </div>
+                <% end %>
+            </div>
+            <% end %>
+        </div>
+    </div>
+    <footer class="d-flex justify-content-around py-5">
+        <ul class="p-0 d-inline-flex">
+            <li><i class="fab fa-facebook-square pr-4"></i></li>
+            <li><i class="fab fa-instagram pr-4"></i></li>
+            <li><i class="fab fa-twitter"></i></li>
+        </ul>
+    </footer>
+</div>

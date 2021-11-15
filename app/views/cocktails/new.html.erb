@@ -1,9 +1,15 @@
-<h1>Create a new cocktail!</h1>
-
-<!-- A user can create a new cocktails => make a form -->
-<%= form_for(@cocktail) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-
-  <%= f.submit %>
-<% end %>
+<div class="d-flex">
+    <div class="background-show"></div>
+    <%= link_to cocktails_path do %>
+    <i class="fas fa-arrow-circle-left arrow"></i>
+    <% end %>
+    <div class="background-black">
+        <div>
+            <%= simple_form_for @cocktail do |f| %>
+            <%= f.input :name %>
+            <%= f.input :photo, as: :file %>
+            <%= f.submit class: "button-new text-center w-100" %>
+            <% end %>
+        </div>
+    </div>
+</div>
