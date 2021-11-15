@@ -9,7 +9,6 @@ Cocktail.create(name: "Pina Colada")
 Cocktail.create(name: "Gin Fizz")
 Cocktail.create(name: "Old Fashioned")
 
-
 Ingredient.destroy_all
 
 result = JSON.parse(open('http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list').read)
